@@ -9,24 +9,93 @@ services:
       - "6080:6080"
       - "5554:5554"
       - "5555:5555"
-    environment:
-      - EMULATOR_DEVICE=Samsung Galaxy S10
-      - WEB_VNC=true
-    volumes:
-      - /home/qauser/mlwallet-android.apk:/home/androidusr/mlwallet-android.apk
     devices:
       - /dev/kvm
-  s9:
-    image: budtmo/docker-android:emulator_13.0
+  s10_1:
+    build:
+      context: .
+      dockerfile: Dockerfile
     privileged: true
     ports:
       - 6081:6080
       - 5556:5554
-      - 5557:5555
-    environment:
-      - EMULATOR_DEVICE=Samsung Galaxy S9
-      - WEB_VNC=true    
-    volumes:
-      - /home/qauser/mlwallet-android.apk:/home/androidusr/mlwallet-android.apk
+      - 5557:5555  
+    devices:
+      - /dev/kvm
+  s10_2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+    ports:
+      - 6082:6080
+      - 5558:5554
+      - 5559:5555
+    devices:
+      - /dev/kvm
+  s10_3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+    ports:
+      - 6083:6080
+      - 5560:5554
+      - 5561:5555
+    devices:
+      - /dev/kvm
+  s10_4:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+    ports:
+      - 6084:6080
+      - 5562:5554
+      - 5563:5555
+    devices:
+      - /dev/kvm
+  s10_5:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+    ports:
+      - 6085:6080
+      - 5564:5554
+      - 5565:5555
+    devices:
+      - /dev/kvm
+  s10_6:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+    ports:
+      - 6086:6080
+      - 5566:5554
+      - 5567:5555
+    devices:
+      - /dev/kvm
+  s10_7:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+    ports:
+      - 6087:6080
+      - 5568:5554
+      - 5569:5555
+    devices:
+      - /dev/kvm
+  s10_8:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+    ports:
+      - 6088:6080
+      - 5570:5554
+      - 5571:5555
     devices:
       - /dev/kvm
